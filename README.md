@@ -75,13 +75,12 @@ WEATHER_API_KEY=your_weatherapi_key_here
 📄 LICENSE
 ───────────────────────────────
 
-This project is licensed under the MIT License.
-
+This project is licensed.
 ───────────────────────────────
 ✨ FUTURE IMPROVEMENTS
 ───────────────────────────────
 
-- Deploy as a web app (Flask/Streamlit)
+- Deploy as a web app 
 - Add voice input
 - Vernacular language UX
 - Offline-first support for rural use-cases
