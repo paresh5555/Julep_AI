@@ -1,0 +1,39 @@
+weather_task:
+  name: Weather Decision
+  description: Indoor or outdoor dining recommendation based on weather.
+  main:
+    - prompt:
+        - role: system
+          content: You are a helpful travel planner.
+        - role: user
+          content: "$ f'The weather today in {steps[0].input.city} is {steps[0].input.weather_desc}, with temperature {steps[0].input.temp_c}°C and chance of rain {steps[0].input.rain_chance}%. Should the person dine indoors or outdoors?'"
+
+food_task:
+  name: Local Dishes
+  description: Pick 3 iconic dishes from a city.
+  main:
+    - prompt:
+        - role: system
+          content: You are a culinary expert.
+        - role: user
+          content: "$ f'Suggest 3 iconic dishes from {steps[0].input.city} that every visitor must try. Suggest one dish each for breakfast, lunch and dinner for one day.'"
+
+restaurant_task:
+  name: Top Restaurants
+  description: Recommend top-rated restaurants for dishes.
+  main:
+    - prompt:
+        - role: system
+          content: You are a local food expert.
+        - role: user
+          content: "$ f'List one top-rated restaurant for each of these dishes in {steps[0].input.city}: {steps[0].input.dishes_str}'"
+
+tour_task:
+  name: Foodie Day Tour
+  description: Create a narrative for a food tour.
+  main:
+    - prompt:
+        - role: system
+          content: You are a travel writer.
+        - role: user
+          content: "$ f'Write a delightful food tour in {steps[0].input.city} for a day with {steps[0].input.weather_type} dining. Include breakfast, lunch, and dinner with the dishes {steps[0].input.dishes_str} at the recommended restaurants- {steps[0].input.restaurants}.'"
